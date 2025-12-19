@@ -70,7 +70,7 @@ disp_spi: &spi3 {
        compatible = "sitronix,st7789v";
        spi-max-frequency = <31000000>;
        reg = <0>;
-       cmd-data-gpios = <&gpio1 15 GPIO_ACTIVE_HIGH>;
+       cmd-data-gpios = <&gpio1 15 GPIO_ACTIVE_LOW>;
        reset-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;
        width = <240>;
        height = <280>;
