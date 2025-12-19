@@ -173,22 +173,9 @@ config DONGLE_SCREEN_AMBIENT_LIGHT
     bool "Enable automatic brightness via ambient light sensor"
     default n
     select SENSOR
+    select BH1750
     help
       If enabled, the ambient light sensor will be used to automatically adjust screen brightness.
-
-choice DONGLE_SCREEN_AMBIENT_LIGHT_SENSOR
-    depends on DONGLE_SCREEN_AMBIENT_LIGHT
-    default DONGLE_SCREEN_LIGHT_SENSOR_APDS9960
-
-config DONGLE_SCREEN_LIGHT_SENSOR_APDS9960
-    bool "APDS9960 ambient light sensor"
-    select APDS9960
-
-config DONGLE_SCREEN_LIGHT_SENSOR_BH1750
-    bool "BH1750 ambient light sensor"
-    select BH1750
-
-endchoice
 
 config DONGLE_SCREEN_AMBIENT_LIGHT_TEST
     bool "Enable automatic brightness testing"
