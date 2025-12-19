@@ -524,7 +524,7 @@ ZMK_SUBSCRIPTION(screen_idle, zmk_layer_state_changed);
 
 #if IS_ENABLED(CONFIG_DONGLE_SCREEN_AMBIENT_LIGHT)
 
-#define AMBIENT_LIGHT_SENSOR_NODE DT_INST(0, avago_apds9960)
+#define AMBIENT_LIGHT_SENSOR_NODE DT_ALIAS(light_sensor)
 static const struct device *ambient_sensor = DEVICE_DT_GET(AMBIENT_LIGHT_SENSOR_NODE);
 
 // Passe diese Werte nach deinen Messungen an!

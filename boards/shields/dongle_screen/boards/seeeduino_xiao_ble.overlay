@@ -90,6 +90,12 @@ disp_spi: &spi3 {
    };
 };
 
+/ {
+	aliases {
+		light-sensor = &apds9960;
+	};
+};
+
 &pwm1 {
   status = "okay";
   pinctrl-0 = <&pwm1_default>;
